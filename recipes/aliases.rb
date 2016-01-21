@@ -1,7 +1,7 @@
 cookbook_file "/Users/#{node['sprout']['user']}/.bash_it/aliases/available/spruce.aliases.bash" do
   source 'spruce.aliases.bash'
   owner node['sprout']['user']
-  group admin
+  group 'admin'
   mode '0644'
   action :create
 end
