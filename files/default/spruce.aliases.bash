@@ -1,0 +1,45 @@
+alias show='ps aux | grep '
+alias tcat="tail -f $CATALINA_HOME/logs/catalina.out"
+alias cdsw="cd $WORKSPACE/spt-web"
+alias cddw="cd $WORKSPACE/demo-web"
+alias cdraw="cd $WORKSPACE/java-parent-services/src/ra-web"
+alias cdjac="cd $WORKSPACE/java-parent-services/src/java-api-controllers"
+alias cdjcs="cd $WORKSPACE/java-parent-services/src/java-customer-services"
+alias cdjes="cd $WORKSPACE/java-parent-services/src/java-energy-services"
+alias cdjus="cd $WORKSPACE/java-parent-services/src/java-user-services"
+alias cdjds="cd $WORKSPACE/java-parent-services/src/java-document-services"
+alias cdjns="cd $WORKSPACE/java-parent-services/src/java-notification-services"
+alias cdjps="cd $WORKSPACE/java-parent-services/src/java-proposal-services"
+alias cdjls="cd $WORKSPACE/java-parent-services/src/java-logging-services"
+alias cdjco="cd $WORKSPACE/java-parent-services/src/spt-java-common"
+alias cdjpar="cd $WORKSPACE/java-parent-services"
+alias cddock="cd $WORKSPACE/docker-compose"
+alias cddocklocal="cd $WORKSPACE/docker-compose/local"
+alias mbuild="mvn clean install"
+alias gplall="echo 'ra-web'; cdraw; gpl; echo 'jco';cdjco;gpl; echo 'jac';cdjac;gpl; echo 'jcs';cdjcs;gpl; echo 'jus';cdjus;gpl; echo 'jns';cdjns;gpl; echo 'jes';cdjes;gpl; echo 'jps';cdjps;gpl; echo 'jls';cdjls;gpl; echo 'jds';cdjds;gpl"
+alias buildall="cdjco; mbuild; cdjac;mbuild; cdjcs;mbuild; cdjus;mbuild; cdjns;mbuild; cdjes;mbuild; cdjps;mbuild; cdjls;mbuild; cdjds;mbuild"
+
+alias reloadjus="cdjus; gpl; mbuild; runjs.sh java-user-services"
+alias reloadjcs="cdjcs; gpl; mbuild; runjs.sh java-customer-services"
+alias reloadjes="cdjes; gpl; mbuild; runjs.sh java-energy-services"
+alias reloadjns="cdjns; gpl; mbuild; runjs.sh java-notification-services"
+alias reloadjps="cdjps; gpl; mbuild; runjs.sh java-proposal-services"
+alias reloadjls="cdjls; gpl; mbuild; runjs.sh java-logging-services"
+alias reloadjds="cdjds; gpl; mbuild; runjs.sh java-document-services"
+
+alias stopjus="pkill -f java-user-services"
+alias stopjcs="pkill -f java-customer-services"
+alias stopjes="pkill -f java-energy-services"
+alias stopjns="pkill -f java-notification-services"
+alias stopjps="pkill -f java-proposal-services"
+alias stopjls="pkill -f java-logging-services"
+alias stopjds="pkill -f java-document-services"
+alias stopjps="pkill -f java-proposal-services"
+
+alias startjcs='runjs.sh java-customer-services'
+alias startjds='runjs.sh java-document-services'
+alias startjes='runjs.sh java-energy-services'
+alias startjls='runjs.sh java-logging-services'
+alias startjns='runjs.sh java-notification-services'
+alias startjps='runjs.sh java-proposal-services'
+alias startjus='runjs.sh java-user-services'
