@@ -1,6 +1,9 @@
 if [ -e /usr/libexec/java_home ]; then
     export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 fi
+
+source "~/.local_profile"
+
 export CATALINA_HOME="/Library/Tomcat"
 export MYSQL_URL=$P3IP:3306
 export MYSQL_LOGS_URL=ra-logs-dev.c5eechg2dviq.us-east-1.rds.amazonaws.com:3306
