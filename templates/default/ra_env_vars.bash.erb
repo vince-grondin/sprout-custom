@@ -2,8 +2,8 @@ if [ -e /usr/libexec/java_home ]; then
     export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 fi
 
-source "~/.local_profile"
-source "~/.rvm/scripts/rvm"
+source "/Users/<%= @local_user %>/.local_profile"
+source "/Users/<%= @local_user %>/scripts/rvm"
 
 export CATALINA_HOME="/Library/Tomcat"
 export MYSQL_URL=$P3IP:3306
