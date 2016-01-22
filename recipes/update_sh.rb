@@ -1,4 +1,4 @@
 execute 'execute_update.sh' do
-  cwd '/Users/<%= node['sprout']['user'] %>/workspace/java-parent-services/bin/'
+  cwd "/Users/<%= node['sprout']['user'] %>/workspace/java-parent-services/bin/"
   command './update.sh'
 end
