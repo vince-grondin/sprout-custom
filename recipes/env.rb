@@ -15,5 +15,5 @@ template "/Users/#{node['sprout']['user']}/.local_profile" do
   variables({
      :local_user => node['sprout']['user']
   })
-  aciton :create_if_missing
+  action :create_if_missing
 end
