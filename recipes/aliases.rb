@@ -1,4 +1,4 @@
-template '/Users/#{node['sprout']['user']}/.bash_it/aliases/available/spruce.aliases.bash' do
+template "/Users/#{node['sprout']['user']}/.bash_it/aliases/available/spruce.aliases.bash" do
   source 'spruce.aliases.bash.erb'
   owner node['sprout']['user']
   group 'admin'
