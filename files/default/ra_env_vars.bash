@@ -3,6 +3,7 @@ if [ -e /usr/libexec/java_home ]; then
 fi
 
 source "~/.local_profile"
+source "~/.rvm/scripts/rvm"
 
 export CATALINA_HOME="/Library/Tomcat"
 export MYSQL_URL=$P3IP:3306
