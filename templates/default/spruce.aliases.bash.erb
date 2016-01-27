@@ -51,3 +51,5 @@ alias startjls='runjs.sh java-logging-services'
 alias startjns='runjs.sh java-notification-services'
 alias startjps='runjs.sh java-proposal-services'
 alias startjus='runjs.sh java-user-services'
+
+alias update_tools='cd $SPT_HOME;rsync -vrlptz --delete --exclude=".idea" --exclude="downloads" --exclude="Proxies" --exclude="env_vars.php" --exclude=".git" --exclude="run_zf_script.sh" --safe-links $SPT_HOME/ www-data@$ENG_HOST:/home/spt/tools/'
