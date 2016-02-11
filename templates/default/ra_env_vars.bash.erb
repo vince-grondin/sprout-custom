@@ -10,14 +10,21 @@ export MYSQL_URL=$P3IP:3306
 export MYSQL_LOGS_URL=ra-logs-dev.c5eechg2dviq.us-east-1.rds.amazonaws.com:3306
 export MYSQL_PASSWORD=sunshine
 export MYSQL_USER=cpf_spt
+export MYSQL_USE_SSL=false
+export MYSQL_REQUIRE_SSL=false
+export MYSQL_VERIFY_SERVER_CERTIFICATE=false
+export MYSQL_CLIENT_CERTIFICATE_KEY_STORE_URL=
+export MYSQL_CLIENT_CERTIFICATE_KEY_STORE_PASSWORD=
+export MYSQL_TRUST_CERTIFICATE_KEY_STORE_URL=
+export MYSQL_TRUST_CERTIFICATE_KEY_STORE_PASSWORD=
 export RABBIT_HOST=$P3IP
 export RABBIT_PORT=5672
 export RABBIT_USERNAME=guest
 export RABBIT_PASSWORD=guest
 export RABBIT_REPLY_TIMEOUT=50000
 export RABBIT_VHOST=/
-export RABBIT_USESSL=false
-export RABBIT_SSLPROPERTIESLOCATION=
+export RABBIT_USE_SSL=false
+export RABBIT_SSL_PROPERTIES_LOCATION=
 export REDIS_HOSTNAME=$ENG_HOST
 export REDIS_PORT=6379
 export MONGO_HOST=$P3IP
@@ -29,3 +36,7 @@ export MONGO_LOGS_DATABASE=logs
 export P2_BASE_URL=$ENG_HOST
 export APP_ENV=dev
 export MEMCACHE=$ENG_HOST
+
+
+# Second time source local_profile to allow variables override
+source "/Users/<%= @local_user %>/.local_profile"
