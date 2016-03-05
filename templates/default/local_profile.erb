@@ -2,3 +2,5 @@ export SPT_HOME=/Users/<%= @local_user %>/PhpstormProjects/spt
 export LOCALHOST=localhost
 export P3IP=
 export ENG_HOST=
+export PATH="$WORKSPACE/java-parent-services/bin:$PATH"
+alias update_tools='cd $SPT_HOME;rsync -vrlptz --delete --exclude=".idea" --exclude="downloads" --exclude="Proxies" --exclude="env_vars.

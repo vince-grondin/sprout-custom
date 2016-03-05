@@ -7,10 +7,9 @@ alias show='ps aux | grep '
 alias tcat="tail -f $CATALINA_HOME/logs/catalina.out"
 alias cdspt="cd $SPT_HOME"
 alias cdsprout="cd /Users/<%= @local_user %>/workspace/sprout-wrap"
-alias cdsw="cd /Users/<%= @local_user %>/workspace/spt-web"
-alias cddw="cd /Users/<%= @local_user %>/workspace/demo-web"
 alias cdraw="cd /Users/<%= @local_user %>/workspace/java-parent-services/src/ra-web"
 alias cdjac="cd /Users/<%= @local_user %>/workspace/java-parent-services/src/java-api-controllers"
+alias cdjag="cd /Users/<%= @local_user %>/workspace/java-parent-services/src/java-api-gateway"
 alias cdjcs="cd /Users/<%= @local_user %>/workspace/java-parent-services/src/java-customer-services"
 alias cdjes="cd /Users/<%= @local_user %>/workspace/java-parent-services/src/java-energy-services"
 alias cdjus="cd /Users/<%= @local_user %>/workspace/java-parent-services/src/java-user-services"
@@ -20,36 +19,6 @@ alias cdjps="cd /Users/<%= @local_user %>/workspace/java-parent-services/src/jav
 alias cdjls="cd /Users/<%= @local_user %>/workspace/java-parent-services/src/java-logging-services"
 alias cdjco="cd /Users/<%= @local_user %>/workspace/java-parent-services/src/spt-java-common"
 alias cdjpar="cd /Users/<%= @local_user %>/workspace/java-parent-services"
-alias cddock="cd /Users/<%= @local_user %>/workspace/docker-compose"
-alias cddocklocal="cd /Users/<%= @local_user %>/workspace/docker-compose/local"
 alias mbuild="mvn clean install"
-alias gcoall="cdjpar && cd bin && ./gcoall.sh"
-alias gplall="cdjpar && cd bin && ./gplall.sh"
-alias buildall="cdjpar && cd bin && ./buildall.sh"
-
-alias reloadjus="cdjus; gpl; mbuild; runjs.sh java-user-services"
-alias reloadjcs="cdjcs; gpl; mbuild; runjs.sh java-customer-services"
-alias reloadjes="cdjes; gpl; mbuild; runjs.sh java-energy-services"
-alias reloadjns="cdjns; gpl; mbuild; runjs.sh java-notification-services"
-alias reloadjps="cdjps; gpl; mbuild; runjs.sh java-proposal-services"
-alias reloadjls="cdjls; gpl; mbuild; runjs.sh java-logging-services"
-alias reloadjds="cdjds; gpl; mbuild; runjs.sh java-document-services"
-
-alias stopjus="pkill -f java-user-services"
-alias stopjcs="pkill -f java-customer-services"
-alias stopjes="pkill -f java-energy-services"
-alias stopjns="pkill -f java-notification-services"
-alias stopjps="pkill -f java-proposal-services"
-alias stopjls="pkill -f java-logging-services"
-alias stopjds="pkill -f java-document-services"
-alias stopjps="pkill -f java-proposal-services"
-
-alias startjcs='runjs.sh java-customer-services'
-alias startjds='runjs.sh java-document-services'
-alias startjes='runjs.sh java-energy-services'
-alias startjls='runjs.sh java-logging-services'
-alias startjns='runjs.sh java-notification-services'
-alias startjps='runjs.sh java-proposal-services'
-alias startjus='runjs.sh java-user-services'
 
 alias update_tools='cd $SPT_HOME;rsync -vrlptz --delete --exclude=".idea" --exclude="downloads" --exclude="Proxies" --exclude="env_vars.php" --exclude=".git" --exclude="run_zf_script.sh" --safe-links $SPT_HOME/ www-data@$ENG_HOST:/home/spt/tools/'
